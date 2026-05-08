@@ -1,22 +1,28 @@
-# Pedal invFFT — v1.0
+# Pedal invFFT — v2.0
 
-K5000-inspired additive synth for ReBuzz, built on inverse FFT with
-overlap-add resynthesis.
+K5000-inspired polyphonic additive synth for ReBuzz, built on inverse
+FFT with overlap-add resynthesis.
 
-A monophonic generator that builds its sound by depositing partials
-directly into the frequency domain and inverse-transforming each hop
-into the time domain. Sixteen partials of a 1/n harmonic series form
-the base spectrum; static and time-varying parameters reshape it
-before each iFFT.
+Up to 8 simultaneous voices, one per tracker column. Each voice
+independently manages its pitch, glide, and amp + brightness envelope
+state; global parameters (volume, ADSR shapes, spectrum shaping,
+formant, glide time) apply uniformly across voices. Sixteen partials
+of a 1/n harmonic series form each voice's base spectrum; static and
+time-varying parameters reshape it before each iFFT.
 
 ## Files
 
 - `FFT.cs` — radix-2 in-place complex FFT, allocation-free after
-  construction.
+  construction. Shared by all voices (no per-call state beyond the
+  read-only twiddle tables).
 - `Envelope.cs` — linear-attack, exponential-decay/release ADSR.
-  Shared by both envelope instances.
-- `PedalInvFFT.cs` — the machine: parameters, audio loop, per-hop
-  spectrum builder, glide one-pole.
+  Each voice has two instances (amp + brightness).
+- `Voice.cs` — per-voice state and rendering. Owns the OLA accumulator,
+  per-partial phases, envelopes, glide one-pole, and pending-event
+  queue.
+- `PedalInvFFT.cs` — the machine: parameters, audio loop, voice
+  orchestration, mix accumulation, transport handling, chord-delivery
+  workaround.
 - `PedalInvFFT.NET.csproj` — net10.0-windows, post-build copy to
   `Gear\Generators`.
 
@@ -30,6 +36,27 @@ Defaults to `C:\Program Files\ReBuzz`; override with
 `/p:ReBuzzPath="D:\Apps\ReBuzz"` (or wherever yours lives). Restart
 ReBuzz to pick up the new DLL.
 
+## Polyphony
+
+A new instance starts with one visible track. Add more tracks via the
+pattern editor's column controls (typically right-click on the column
+header) up to a maximum of 8.
+
+Each tracker column maps directly to one voice; track index *is* voice
+index. Notes on multiple columns at the same row produce simultaneous
+chord playback. There is no dynamic voice allocation or stealing —
+chord polyphony comes from explicit per-track placement, which is the
+standard ReBuzz tracker convention.
+
+Per-voice state: pitch, glide, amp envelope, brightness envelope, OLA
+buffer, partial phases. Holding a note on track 0 while retriggering
+on track 1 leaves track 0 unaffected. Glide is per-voice — a slide on
+track 1 doesn't drag track 0's pitch.
+
+Shared across voices: the FFT instance, the spectrum scratch, the
+parameter set. Voices process sequentially within each `Work()` call
+and accumulate into a mix buffer before the final `Sample[]` write.
+
 ## Parameters
 
 Sixteen globals plus a Note track parameter.
@@ -37,10 +64,11 @@ Sixteen globals plus a Note track parameter.
 **Output**
 
 - `Volume` (0–127, default 64) — output level. 64 is roughly unity
-  for a single partial; the full 16-partial saw can clip near 127.
+  for a single partial; the full 16-partial saw can clip near 127,
+  and dense polyphonic chords push that ceiling lower still.
 
 **Amp envelope** — gates the assembled signal at the OLA drain
-stage, applied per sample.
+stage, applied per sample, per voice.
 
 - `Amp Attack` (0–127, default 24)
 - `Amp Decay` (0–127, default 64)
@@ -61,7 +89,8 @@ Decay/Release are "time to 1/e of remaining distance to target".
   attenuates odd partials.
 
 **Brightness envelope** — modulates Brightness over the note (K5000
-style).
+style). Per-voice — each voice's brightness env tracks its own
+NoteOn/Off independently.
 
 - `Bright Attack` (0–127, default 32)
 - `Bright Decay` (0–127, default 80)
@@ -86,7 +115,9 @@ style).
 - `Glide` (0–127, default 0) — pitch slide time between notes; 0
   means instant. Time mapping: ~5 ms at 1, ~100 ms at 64, ~2 s at
   127. First note from rest never glides — it snaps to the played
-  pitch regardless of this setting.
+  pitch regardless of this setting. Per-voice: each voice tracks its
+  own idle state, so a fresh trigger on track 1 still snaps even if
+  track 0 is sustaining.
 
 ## Quick test
 
@@ -120,8 +151,18 @@ etc.) with a smooth ADSR shape and clean release tail.
 **Glide**:
 
 - `Glide` ~64 with overlapping notes (don't release before triggering
-  the next): pitch slides between them.
+  the next) on a single track: pitch slides between them.
 - First note from rest should snap directly to its pitch.
+
+**Polyphony**:
+
+- Add tracks, place a chord on row 0 (e.g. C4 / E4 / G4 across
+  tracks 0/1/2). All three notes ring simultaneously.
+- Hold a long sustain on track 0 (e.g. `Amp Sustain` 100, long
+  Release), trigger short notes on track 1. Track 0's tail keeps
+  ringing untouched while track 1 hammers.
+- With `Glide` set, place a slide on track 0 and a separate static
+  note on track 1. Each voice's pitch evolves independently.
 
 ## Architecture
 
@@ -134,15 +175,31 @@ continuity. Inverse FFT yields a Hann-windowed time-domain frame
 directly — no extra time-domain windowing needed. Overlap-add into a
 length-FFT_SIZE accumulator.
 
-`Work()` drains samples from the OLA accumulator, multiplied by
-`gain × ampEnv.Process()` per sample. Hop-rate updates happen at the
-top of each `RunHop()`: glide advances `_currentMidi` toward
-`_targetMidi` via a one-pole, the brightness envelope state is
-sampled to compute the effective Brightness, and the per-hop formant
-coefficients are precomputed. The brightness envelope is advanced
-HOP_SIZE samples in a batched loop at the end of `RunHop()` rather
-than per-sample, since its only consumer (the spectrum builder)
-reads it once per hop.
+Polyphony layers on top of this without changing the per-voice DSP:
+each voice owns its own OLA accumulator, partial phase array, hop
+schedule, and envelope state. Voices process sequentially within
+each `Work()` call, sharing the spectrum scratch (`_specRe`,
+`_specIm`) and FFT instance — each voice's RunHop clears the scratch,
+fills it from its own state, and inverse-transforms into its own OLA.
+Drained samples accumulate into a `float[]` mix buffer before the
+final pass converts to `Sample[]`.
+
+The amp envelope multiplies at the per-sample drain stage (per voice).
+Hop-rate updates happen at the top of each voice's `RunHop()`: glide
+advances `_currentMidi` toward `_targetMidi` via a one-pole, the
+brightness envelope state is sampled to compute the effective
+Brightness, and the per-hop formant coefficients are precomputed.
+The brightness envelope is advanced HOP_SIZE samples in a batched
+loop at the end of `RunHop()` rather than per-sample, since its only
+consumer (the spectrum builder) reads it once per hop.
+
+A silent-fast-path check skips voices that are inaudible — Idle, or
+parked in Sustain at level zero — so percussive patches drop CPU to
+near-zero between notes.
+
+ReBuzz drops sibling-track notes at chord rows due to a
+`parametersChanged` dictionary collision; the machine works around
+this by polling `pvalues` directly via reflection inside `SetNote`.
 
 ## Architecture limits worth knowing
 
@@ -160,39 +217,47 @@ reads it once per hop.
   spectral changes faster than ~10 ms can't be expressed.
 - **No anti-clip.** All shaping is multiplicative on a 1/n saw base;
   Tilt or Formant boosts can push the output past ±32768 at high
-  `Volume` settings. Default `Volume` of 64 leaves ~6 dB headroom.
+  `Volume` settings. Default `Volume` of 64 leaves ~6 dB headroom for
+  a single voice; dense polyphonic chords shrink that headroom
+  proportionally — drop Volume to ~32 for full eight-voice chords on
+  bright presets.
+- **Per-voice CPU scales linearly.** One FFT per hop per voice, plus
+  the partial deposit loop and drain loop. At 48 kHz with 8 voices
+  active simultaneously, expect ~5% of one core on a modern desktop.
+  Half-active voices (tail in Release) cost the same as fully active
+  ones; only Idle and Sustain-at-zero are skipped.
 
 ## Future work
 
 In rough priority order:
 
-1. **Polyphony.** Each voice needs its own OLA accumulator, FFT
-   scratch, and envelope state (~32 KB plus FFT working set per
-   voice). The FFT is the dominant cost, one per hop per voice;
-   4–8 voices at the current hop rate should be comfortable on
-   modern CPUs. Promote the voice state into a `Voice` class and
-   sum their drain outputs.
-2. **GUI.** A visual spectrum plot (per-partial amplitudes after all
+1. **GUI.** A visual spectrum plot (per-partial amplitudes after all
    shaping) would make sound design dramatically more intuitive than
    sliders alone. Envelope curve editors and a formant-frequency
-   display come next.
-3. **Per-harmonic sliders.** With a GUI in place, replace the
+   display come next. Voice-activity LEDs would also be a nice touch
+   for polyphonic playback.
+2. **Per-harmonic sliders.** With a GUI in place, replace the
    procedural 1/n base with 16 individual amplitude sliders, in the
    spirit of the K5000's harmonic editor.
-4. **Spectrum shape presets.** Before or alongside per-harmonic
+3. **Spectrum shape presets.** Before or alongside per-harmonic
    editing, a `Spectrum Shape` enum could swap the 1/n base for
    square, triangle, pulse, organ-stop, formant-vowel, etc.
-5. **Phase animation.** The K5000 had spectral phase modulation
+4. **Phase animation.** The K5000 had spectral phase modulation
    (slow random walks of partial phases) for subtle movement on
    sustained tones. Cheap to add given we already track phase per
-   partial.
-6. **Deeper modulation routing.** Currently only Brightness has an
+   partial per voice.
+5. **Deeper modulation routing.** Currently only Brightness has an
    envelope. Routing the brightness env (or a third envelope, or an
    LFO) to Tilt, Balance, Formant Centre, or pitch would massively
    expand the sound design space.
-7. **LFO.** Free-running LFO for vibrato, tremolo, and slow timbral
-   wobble. Most useful as a modulation source once routing (#6) is
-   in place.
-8. **Anti-clip / soft saturation.** Output stage `tanh` or polynomial
+6. **LFO.** Free-running LFO for vibrato, tremolo, and slow timbral
+   wobble. Most useful as a modulation source once routing (#5) is
+   in place. Per-voice with key-sync would feel most natural.
+7. **Anti-clip / soft saturation.** Output stage `tanh` or polynomial
    soft-knee to absorb over-range from extreme parameter combinations
-   without hard clipping.
+   without hard clipping. More important now that 8 voices can stack.
+8. **Per-voice parameter offsets.** Velocity-driven Volume, per-track
+   Detune, or per-track Brightness offsets would let polyphonic
+   patches feel less mechanically uniform. Requires careful design
+   of pattern-data delivery (extra track parameters mean extra
+   sibling-poll work in `SetNote`).
