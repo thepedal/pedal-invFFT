@@ -252,9 +252,18 @@ namespace PedalInvFFT
                 formantPeakMinus = MathF.Pow(10f, peakDb / 20f) - 1f;
             }
 
+            // Partial-stretch exponent. Mapped from the 0..127 Stretch
+            // parameter to 0.7..1.3 around a neutral 1.0. At Stretch=64
+            // the exponent is exactly 1.0 ⇒ Pow((p+1), 1.0) ≈ p+1, so
+            // the harmonic series is preserved (within float precision)
+            // for the default value. Hoisted out of the partial loop —
+            // unchanged within a hop. Per-hop changes are at hop rate
+            // (~94 Hz), well below any audible transient.
+            float stretchExp = 1f + (_machine.Stretch - 64) / 64f * 0.3f;
+
             for (int p = 0; p < N_PARTIALS; p++)
             {
-                float partialFreq = _freqHz * (p + 1);
+                float partialFreq = _freqHz * MathF.Pow(p + 1, stretchExp);
                 if (partialFreq >= nyquist) break;
 
                 float kStar = partialFreq * binsPerHz;

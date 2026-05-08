@@ -1,35 +1,29 @@
-// PedalInvFFT.cs — v2.0 (work in progress, step 2).
+// PedalInvFFT.cs — v2.1 (work in progress, step 1: Stretch).
 //
-// Polyphony enabled. N_VOICES=8 and MaxTracks=8; each tracker
-// column maps directly to one Voice instance via SetNote(value, track)
-// → _voices[track]. Step 1's structural refactor put all the
-// per-voice machinery in place (Voice class, mix buffer, IsAudible
-// gating); step 2 just bumps the count.
+// First feature on the v2.1 roadmap: inharmonic partials via a single
+// "Stretch" parameter. Power-curve formula: partialFreq =
+// _freqHz * (p+1)^stretchExp, where stretchExp is mapped from the
+// 0..127 parameter to 0.7..1.3 around a neutral 1.0. Default 64
+// gives stretchExp = 1.0 ⇒ pure harmonic series ⇒ output bit-near-
+// identical to v2.0.
 //
-// Test cases worth validating before tagging v2.0:
+// Polyphonic K5000-inspired additive synth using inverse FFT with
+// overlap-add resynthesis. Up to 8 simultaneous voices, one per
+// tracker column, mapping SetNote(value, track) → _voices[track].
 //
-//   • Single track, single note — should sound identical to step 1
-//     (and therefore to v1.0).
-//   • Two tracks, simultaneous different notes — actual chord.
-//     Each voice's pitch, glide, and envelopes evolve independently.
-//   • Eight tracks at once — stress test for CPU and clipping.
-//     Default Volume=64 leaves headroom but eight-voice chords on
-//     bright presets can push ±32768.
-//   • Hold note on track 0, retrigger on track 1 — track 0 should
-//     keep sustaining unaffected.
-//   • NoteOff on one track shouldn't release any other.
-//   • Transport stop should ForcedRelease every active voice.
+// Per-voice state (OLA buffer, phases, envelopes, glide, hop
+// scheduling, pending events) lives in Voice.cs. This machine
+// class owns:
 //
-// All per-voice state lives in Voice.cs (created in step 1). This
-// machine class owns:
-//
-//   • Parameters (unchanged from v1.0 — same set, same order)
+//   • Parameters (v2.1: appended Stretch after Glide per Build §3.3)
 //   • Shared spectrum scratch (_specRe, _specIm) and the FFT
 //     instance, all reused per voice's RunHop
 //   • The voice array
 //   • The mix buffer (float[] accumulator, summed into Sample[]
 //     output at the end of Work)
 //   • Transport edge detection
+//   • The reflection-cached pvalues handle for the chord-delivery
+//     workaround (Core §14)
 //
 // Architecture and conventions documented in
 // ReBuzz_ManagedMachine_Notes_PedalInvFFT.md and the Pedal-series
@@ -219,6 +213,19 @@ namespace PedalInvFFT
                        DefValue    = 0,
                        Description = "Pitch glide time (0 instant, 127 slow)")]
         public int Glide { get; set; } = 0;
+
+        // ── Inharmonic stretch ────────────────────────────────────────────
+        // Power-curve stretch of the partial series. 64 = neutral
+        // (harmonic). Below 64 compresses partials toward the fundamental
+        // (squashed timbres, hollow attack). Above 64 stretches them
+        // (metallic/bell character at the extreme). Mapped to exponent
+        // 0.7..1.3 in Voice.RunHop.
+        [ParameterDecl(Name        = "Stretch",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "Partial stretch (64=harmonic, less=compressed, more=bell-like)")]
+        public int Stretch { get; set; } = 64;
 
         // ── Track parameter ───────────────────────────────────────────────
         [ParameterDecl(Name        = "Note",
