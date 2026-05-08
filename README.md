@@ -1,22 +1,22 @@
-# Pedal invFFT — v0.4
+# Pedal invFFT — v1.0
 
-A K5000-inspired inverse-FFT additive synth for ReBuzz, in the Pedal series.
+K5000-inspired additive synth for ReBuzz, built on inverse FFT with
+overlap-add resynthesis.
 
-- **v0.1** — iFFT-OLA path verified as a fixed 16-partial saw drone.
-- **v0.2** — Amp ADSR envelope + transport-stop handling.
-- **v0.3** — static spectrum-shape parameters: Brightness, Tilt, Balance.
-- **v0.3.1** — bugfix: parameter names/descriptions made XML/XAML-safe
-  (Core §28).
-- **v0.4** — Spectrum envelope modulating Brightness. The synth now
-  *breathes*.
+A monophonic generator that builds its sound by depositing partials
+directly into the frequency domain and inverse-transforming each hop
+into the time domain. Sixteen partials of a 1/n harmonic series form
+the base spectrum; static and time-varying parameters reshape it
+before each iFFT.
 
 ## Files
 
-- `FFT.cs` — radix-2 in-place complex FFT.
-- `Envelope.cs` — linear-attack, exponential-decay/release ADSR with
-  `ForcedRelease()` for transport-stop handling. Used unmodified for
-  both amp and spec envelopes.
-- `PedalInvFFT.cs` — the machine.
+- `FFT.cs` — radix-2 in-place complex FFT, allocation-free after
+  construction.
+- `Envelope.cs` — linear-attack, exponential-decay/release ADSR.
+  Shared by both envelope instances.
+- `PedalInvFFT.cs` — the machine: parameters, audio loop, per-hop
+  spectrum builder, glide one-pole.
 - `PedalInvFFT.NET.csproj` — net10.0-windows, post-build copy to
   `Gear\Generators`.
 
@@ -26,127 +26,173 @@ A K5000-inspired inverse-FFT additive synth for ReBuzz, in the Pedal series.
 dotnet build -c Release
 ```
 
-Defaults to `C:\Program Files\ReBuzz`; override with `/p:ReBuzzPath=...`.
+Defaults to `C:\Program Files\ReBuzz`; override with
+`/p:ReBuzzPath="D:\Apps\ReBuzz"` (or wherever yours lives). Restart
+ReBuzz to pick up the new DLL.
 
-## How to verify v0.4
+## Parameters
 
-All earlier tests still apply. With the v0.4 defaults, **Spec Amount=64**
-means no spec-env modulation, so the synth should sound identical to
-v0.3.1 until you dial Spec Amount above (or below) 64.
+Sixteen globals plus a Note track parameter.
 
-**Classic K5000 filter envelope (the one to hear first):**
-- Brightness=64, Spec Amount=127, Spec Attack=0, Spec Decay=80,
-  Spec Sustain=0, Spec Release=48
-- Hold a note. Should attack bright (env opens brightness from 64 up
-  to 127 within a few ms), then decay to dark (back to 64 over the
-  decay time, since sustain is 0). On note-off, the release is mostly
-  cosmetic since brightness is already low.
+**Output**
 
-**Slow brightness swell (pad):**
-- Brightness=32, Spec Amount=127, Spec Attack=120 (~3 s),
-  Spec Sustain=127 (full hold)
-- Hold a long note. Brightness should slowly rise from 32 (dark) to
-  127 (bright) over the attack time, then hold. Release closes back
-  down on note-off.
+- `Volume` (0–127, default 64) — output level. 64 is roughly unity
+  for a single partial; the full 16-partial saw can clip near 127.
 
-**Inverted envelope (filter closes during attack):**
-- Brightness=127, Spec Amount=0 (full negative), Spec Attack=24,
-  Spec Sustain=127
-- Note attacks bright, env immediately ducks brightness down to 0
-  (env=1 with negative amount = full negative mod = brightness=0),
-  holds dark through sustain. The "filter closes on note" sound.
+**Amp envelope** — gates the assembled signal at the OLA drain
+stage, applied per sample.
 
-**No-op sanity check:**
-- Spec Amount=64. Synth should sound exactly like v0.3.1 — confirms
-  the modulation cleanly short-circuits at the neutral point.
+- `Amp Attack` (0–127, default 24)
+- `Amp Decay` (0–127, default 64)
+- `Amp Sustain` (0–127, default 100)
+- `Amp Release` (0–127, default 48)
 
-**If something sounds wrong:**
-- *Brightness doesn't move when Spec Amount goes above 64*: spec env
-  isn't being advanced or its `Level` isn't being read in `RunHop`.
-  Check the `_specEnv.Process()` call in the drain loop and the
-  `_specEnv.Level` read at the top of `RunHop`.
-- *Brightness modulates but synth tone seems wrong*: the
-  `effectiveBright` clamp may be wrong. Verify it stays in [0, 127].
-- *Note-off doesn't release the spec env (brightness sticks)*: missing
-  `_specEnv.NoteOff()` alongside `_ampEnv.NoteOff()` in the note-off
-  branch.
-- *Voice rings on after Stop*: `ForcedRelease(sr)` not being called on
-  `_specEnv` alongside `_ampEnv`. Check Core §27 transport-stop block.
-- *Click on retrigger of just-released note*: spec env's level state
-  on retrigger should continue from where it was; should not reset to
-  zero. (Same click-free retrigger pattern as amp env.)
+Time params map exponentially: 0 → 0.5 ms, 64 → ~50 ms, 127 → 5 s.
+Decay/Release are "time to 1/e of remaining distance to target".
 
-## What v0.4 still does NOT do
+**Static spectrum shaping** — multiplied per partial before iFFT.
 
-- **No formant filter.** Coming next (v0.5).
-- **No glide.** Pitch jumps instantly between notes.
-- **No polyphony.** Monophonic.
-- **No GUI.** Just rack parameters and the Note track parameter.
-- **Spec env is hardwired to Brightness only.** Tilt and Balance can't
-  be modulated by the env — K5000-style design choice.
-- **No per-harmonic sliders.** Spectrum shape is parametric.
-- **No anti-clip.** A 1/n saw at `Volume=127` will clip; default 64
-  is safe.
+- `Brightness` (0–127, default 127) — soft lowpass cutoff. Lower
+  values attenuate higher partials with an exponential roll-off.
+- `Tilt` (0–127, default 64) — broadband spectral slope. Below 64
+  attenuates highs uniformly; above 64 boosts them.
+- `Balance` (0–127, default 64) — even/odd partial balance. Below
+  64 attenuates even partials (thin, hollow timbre); above 64
+  attenuates odd partials.
+
+**Brightness envelope** — modulates Brightness over the note (K5000
+style).
+
+- `Bright Attack` (0–127, default 32)
+- `Bright Decay` (0–127, default 80)
+- `Bright Sustain` (0–127, default 0)
+- `Bright Release` (0–127, default 48)
+- `Bright Amount` (0–127, default 64) — bipolar mod depth: 64 is no
+  modulation; below 64 pulls Brightness *down* during the envelope's
+  attack/decay; above 64 pushes it *up*. Note: at high Amount with
+  Brightness already at 127, positive modulation clamps flat.
+
+**Formant filter** — Gaussian bell on each partial in log-frequency.
+
+- `Formant Centre` (0–127, default 64) — peak frequency, log-mapped
+  100 Hz to ~6 kHz.
+- `Formant Width` (0–127, default 64) — bandwidth, 0.1 to 2 octaves.
+- `Formant Amount` (0–127, default 0) — peak gain, 0 to +18 dB.
+  Default 0 means "off" — the formant branch short-circuits and adds
+  no per-partial cost.
+
+**Glide**
+
+- `Glide` (0–127, default 0) — pitch slide time between notes; 0
+  means instant. Time mapping: ~5 ms at 1, ~100 ms at 64, ~2 s at
+  127. First note from rest never glides — it snaps to the played
+  pitch regardless of this setting.
+
+## Quick test
+
+Drop into a song, route to master, and play notes from a pattern.
+
+**At defaults**: pitched saw drone at the played pitch (A-4 = 440 Hz,
+etc.) with a smooth ADSR shape and clean release tail.
+
+**Spectrum shaping**:
+
+- Sweep `Brightness` 127 → 0: bright saw → mellow → dark sine-ish.
+- `Tilt` away from 64 emphasizes or de-emphasizes highs without
+  changing perceived pitch.
+- `Balance` < 64 yields a hollow, square-like character; > 64 is
+  brighter and closer to a saw.
+
+**Envelopes**:
+
+- `Amp Attack` ~127: fade-in over a few seconds.
+- `Bright Amount` ~30 with `Bright Decay` ~80: filter-sweep envelope
+  on note onset — bright pluck collapsing to dark sustain, snapping
+  bright again briefly at release.
+
+**Formant**:
+
+- `Formant Amount` ~80 with `Formant Centre` ~64: vowel-like
+  coloration at ~765 Hz. Sweep `Formant Centre` for a wah effect.
+  Particularly nice paired with the brightness envelope — the
+  formant peak stays anchored while the brightness rolls past it.
+
+**Glide**:
+
+- `Glide` ~64 with overlapping notes (don't release before triggering
+  the next): pitch slides between them.
+- First note from rest should snap directly to its pitch.
 
 ## Architecture
 
-The synthesis path is unchanged from v0.1: `FFT_SIZE = 2048`,
-`HOP_SIZE = 512` (75% overlap). Each hop, for each partial, compute a
-modulated amplitude (base saw 1/n, multiplied by Brightness curve,
-Tilt curve, Balance factor) and deposit the Hann main-lobe shape
-across 5 bins. Inverse FFT yields a Hann-windowed time-domain frame
-directly. Overlap-add into a length-FFT_SIZE accumulator.
+`FFT_SIZE = 2048`, `HOP_SIZE = 512` (75% overlap, Hann window, COLA
+constant 2). Each hop, for each of 16 partials: compute the partial's
+amplitude (1/n base, modified by Brightness, Tilt, Balance, and
+Formant), deposit the Hann main-lobe shape across 5 bins centered on
+the fractional frequency bin, with phase tracked across hops for
+continuity. Inverse FFT yields a Hann-windowed time-domain frame
+directly — no extra time-domain windowing needed. Overlap-add into a
+length-FFT_SIZE accumulator.
 
-**Amp env** evaluates per sample at the OLA drain stage:
-`output = olaBuf[i] · gain · ampEnv.Process()`. The OLA buffer always
-holds "what the signal would be at env=1" so envelope changes don't
-invalidate the tail.
-
-**Spec env** (new) advances per sample alongside the amp env (same
-`Process()` call cadence), but its `Level` is only consulted at hop
-boundaries — `RunHop()` reads `_specEnv.Level` and combines with the
-static `Brightness` parameter to produce an effective brightness value
-for that frame's spectrum build:
-
-```
-specEnvAmount   = (SpecAmount − 64) / 64       ∈ [−1, +1]
-specMod         = specEnvAmount · _specEnv.Level · 127
-effectiveBright = clamp(Brightness + specMod, 0, 127)
-brightCutoff    = (effectiveBright / 127) · N_PARTIALS
-```
-
-This means brightness changes are quantized to hop rate (~94 Hz at
-48 kHz), which is plenty for envelope shapes — anything faster would
-be modulation rather than envelope.
-
-Both envelopes share lifecycle: `NoteOn`, `NoteOff`, `ForcedRelease`
-(on transport stop) all apply to both. The silent fast-path is gated
-on `_ampEnv.IsActive` only — if the amp env is Idle, no audio is
-coming out regardless of spec env state.
+`Work()` drains samples from the OLA accumulator, multiplied by
+`gain × ampEnv.Process()` per sample. Hop-rate updates happen at the
+top of each `RunHop()`: glide advances `_currentMidi` toward
+`_targetMidi` via a one-pole, the brightness envelope state is
+sampled to compute the effective Brightness, and the per-hop formant
+coefficients are precomputed. The brightness envelope is advanced
+HOP_SIZE samples in a batched loop at the end of `RunHop()` rather
+than per-sample, since its only consumer (the spectrum builder)
+reads it once per hop.
 
 ## Architecture limits worth knowing
 
-- **OLA intrinsic ramp ~32 ms** at 48 kHz — see v0.2 README.
-- **Spec env updates Brightness at hop rate** (~94 Hz). Slow envelopes
-  fine; fast LFO-style modulation above ~30 Hz would be audibly
-  stepped — not a use case for v0.4.
-- **No env-to-env modulation.** Spec env can only be triggered by
-  note events, not by other LFO/env sources.
-- **Brightness clamp at extremes loses sweep range.** With static
-  Brightness=127 and positive Spec Amount, the env has no headroom to
-  open further; brightness modulation is a no-op. Symmetric at
-  Brightness=0 with negative Spec Amount. Dial static brightness to
-  the middle of where you want the sweep to land.
+- **Intrinsic OLA ramp is ~32 ms.** With FFT_SIZE=2048 and
+  HOP_SIZE=512, the overlap-add buffer takes about 32 ms to build up
+  to a full four-frame overlap. `Amp Attack` settings below ~32 ms
+  saturate against this limit — the envelope hits unity fast but the
+  OLA itself is still ramping. Suits pads and leads; not ideal for
+  percussion.
+- **~21 ms inherent latency.** Half the FFT window. Acceptable for
+  slow-attack patches; noticeable for tight rhythmic playing.
+- **Hop-rate spectrum updates.** The brightness envelope, formant
+  coefficients, and pitch (during glide) update once per hop
+  (~94 Hz at 48 kHz). Plenty for any musical envelope curve, but
+  spectral changes faster than ~10 ms can't be expressed.
+- **No anti-clip.** All shaping is multiplicative on a 1/n saw base;
+  Tilt or Formant boosts can push the output past ±32768 at high
+  `Volume` settings. Default `Volume` of 64 leaves ~6 dB headroom.
 
-## Next steps toward v1.0
+## Future work
 
-1. ✅ ~~Envelopes — Amp ADSR + transport-stop handling.~~ **(v0.2)**
-2. ✅ ~~Static spectrum shape — Brightness, Tilt, Balance.~~ **(v0.3)**
-3. ✅ ~~Spectrum envelope modulating Brightness.~~ **(v0.4)**
-4. **Formant filter.** Centre + amount, applied as a multiplicative
-   bell on the spectrum during the deposit step. Vowel-like character.
-5. **Glide.** Smoothed `_freqHz` between notes; one-pole on the target.
-6. **Polyphony.** Promote voice state into a `Voice` class, run N
-   voices, sum their OLA outputs.
+In rough priority order:
 
-GUI lands once the sound is musically usable.
+1. **Polyphony.** Each voice needs its own OLA accumulator, FFT
+   scratch, and envelope state (~32 KB plus FFT working set per
+   voice). The FFT is the dominant cost, one per hop per voice;
+   4–8 voices at the current hop rate should be comfortable on
+   modern CPUs. Promote the voice state into a `Voice` class and
+   sum their drain outputs.
+2. **GUI.** A visual spectrum plot (per-partial amplitudes after all
+   shaping) would make sound design dramatically more intuitive than
+   sliders alone. Envelope curve editors and a formant-frequency
+   display come next.
+3. **Per-harmonic sliders.** With a GUI in place, replace the
+   procedural 1/n base with 16 individual amplitude sliders, in the
+   spirit of the K5000's harmonic editor.
+4. **Spectrum shape presets.** Before or alongside per-harmonic
+   editing, a `Spectrum Shape` enum could swap the 1/n base for
+   square, triangle, pulse, organ-stop, formant-vowel, etc.
+5. **Phase animation.** The K5000 had spectral phase modulation
+   (slow random walks of partial phases) for subtle movement on
+   sustained tones. Cheap to add given we already track phase per
+   partial.
+6. **Deeper modulation routing.** Currently only Brightness has an
+   envelope. Routing the brightness env (or a third envelope, or an
+   LFO) to Tilt, Balance, Formant Centre, or pitch would massively
+   expand the sound design space.
+7. **LFO.** Free-running LFO for vibrato, tremolo, and slow timbral
+   wobble. Most useful as a modulation source once routing (#6) is
+   in place.
+8. **Anti-clip / soft saturation.** Output stage `tanh` or polynomial
+   soft-knee to absorb over-range from extreme parameter combinations
+   without hard clipping.
