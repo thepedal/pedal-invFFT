@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <AssemblyName>Pedal invFFT.NET</AssemblyName>
+    <RootNamespace>PedalInvFFT</RootNamespace>
+    <UseWindowsForms>false</UseWindowsForms>
+    <UseWPF>false</UseWPF>
+    <Nullable>disable</Nullable>
+
+    <!-- Mandatory per Build §1.2: keeps Buzz from refusing to load
+         the assembly because of stray .pdb / .deps.json artefacts,
+         and silences the harmless MSB3277 multi-version warning. -->
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <NoWarn>MSB3277</NoWarn>
+
+    <!-- Default ReBuzz install path; override on the command line with
+         /p:ReBuzzPath=... if your install lives elsewhere. -->
+    <ReBuzzPath Condition="'$(ReBuzzPath)' == ''">C:\Program Files\ReBuzz</ReBuzzPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BuzzGUI.Interfaces">
+      <HintPath>$(ReBuzzPath)\BuzzGUI.Interfaces.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Buzz.MachineInterface">
+      <HintPath>$(ReBuzzPath)\Buzz.MachineInterface.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="DeployToReBuzz" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)"
+          DestinationFolder="$(ReBuzzPath)\Gear\Generators"
+          SkipUnchangedFiles="false" />
+    <Message Importance="high"
+             Text="Deployed $(AssemblyName).dll → $(ReBuzzPath)\Gear\Generators" />
+  </Target>
+
+</Project>
