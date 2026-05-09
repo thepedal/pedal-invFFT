@@ -46,10 +46,11 @@ namespace PedalInvFFT
         const float MAX_TILT_AMOUNT      = 0.5f;
 
         // ── Per-voice state ───────────────────────────────────────────────
-        readonly float[]   _olaBuf    = new float[FFT_SIZE];
-        readonly float[]   _phases    = new float[N_PARTIALS];
-        readonly Envelope  _ampEnv    = new Envelope();
-        readonly Envelope  _brightEnv = new Envelope();   // modulates Brightness
+        readonly float[]   _olaBuf     = new float[FFT_SIZE];
+        readonly float[]   _phases     = new float[N_PARTIALS];
+        readonly float[]   _animPhases = new float[N_PARTIALS];   // §20
+        readonly Envelope  _ampEnv     = new Envelope();
+        readonly Envelope  _brightEnv  = new Envelope();   // modulates Brightness
 
         int   _samplesUntilNextHop = 0;
         int   _olaReadPos          = 0;
@@ -71,7 +72,10 @@ namespace PedalInvFFT
         {
             _machine = machine;
             for (int p = 0; p < N_PARTIALS; p++)
-                _phases[p] = (float)(rng.NextDouble() * 2.0 * Math.PI);
+            {
+                _phases[p]     = (float)(rng.NextDouble() * 2.0 * Math.PI);
+                _animPhases[p] = (float)(rng.NextDouble() * 2.0 * Math.PI);
+            }
         }
 
         // ── Event queue (called from setter on UI thread) ─────────────────
@@ -261,6 +265,23 @@ namespace PedalInvFFT
             // (~94 Hz), well below any audible transient.
             float stretchExp = 1f + (_machine.Stretch - 64) / 64f * 0.3f;
 
+            // Harmonic micro-animation (§20). Hoisted out of the
+            // partial loop — depth and base rate are constant within a
+            // hop, only the per-partial phases advance. animOn=false at
+            // depth 0 takes a fast path that skips the per-partial Sin
+            // and the phase advance, so default-value cost is essentially
+            // zero.
+            int   animDepthInt     = _machine.AnimDepth;
+            bool  animOn           = animDepthInt > 0;
+            float animDepth        = 0f;
+            float animPhaseAdvBase = 0f;
+            if (animOn)
+            {
+                animDepth        = (animDepthInt / 127f) * 0.5f;          // 0..0.5
+                float animBaseHz = 0.1f * MathF.Pow(50f, _machine.AnimRate / 127f);
+                animPhaseAdvBase = 2f * MathF.PI * HOP_SIZE / sr * animBaseHz;
+            }
+
             for (int p = 0; p < N_PARTIALS; p++)
             {
                 float partialFreq = _freqHz * MathF.Pow(p + 1, stretchExp);
@@ -288,6 +309,14 @@ namespace PedalInvFFT
                     amp *= 1f + formantPeakMinus * weight;
                 }
 
+                // Per-partial animation. Off-by-default; when on,
+                // multiplies amp by (1 + depth × sin(phase[p])).
+                if (animOn)
+                {
+                    float anim = 1f + animDepth * MathF.Sin(_animPhases[p]);
+                    amp *= anim;
+                }
+
                 float dep   = DEPOSIT_GAIN * amp;
                 float phase = _phases[p];
                 float reC   = dep * MathF.Cos(phase);
@@ -311,6 +340,19 @@ namespace PedalInvFFT
                 _phases[p] += phaseAdvCo * partialFreq;
                 while (_phases[p] >  MathF.PI) _phases[p] -= 2f * MathF.PI;
                 while (_phases[p] < -MathF.PI) _phases[p] += 2f * MathF.PI;
+
+                // Advance per-partial animation phase. Linear rate spread
+                // (0.7..1.3 of base) ensures partials don't synchronize
+                // — partial 15's period is ~1.86× partial 0's, irrational
+                // enough in practice that they never realign over musical
+                // timescales.
+                if (animOn)
+                {
+                    float rate = 0.7f + p * 0.04f;
+                    _animPhases[p] += animPhaseAdvBase * rate;
+                    while (_animPhases[p] >  MathF.PI) _animPhases[p] -= 2f * MathF.PI;
+                    while (_animPhases[p] < -MathF.PI) _animPhases[p] += 2f * MathF.PI;
+                }
             }
 
             fft.Inverse(specRe, specIm);

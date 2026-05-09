@@ -1,21 +1,28 @@
-// PedalInvFFT.cs — v2.1 (work in progress, step 1: Stretch).
+// PedalInvFFT.cs — v2.1.
 //
-// First feature on the v2.1 roadmap: inharmonic partials via a single
-// "Stretch" parameter. Power-curve formula: partialFreq =
-// _freqHz * (p+1)^stretchExp, where stretchExp is mapped from the
-// 0..127 parameter to 0.7..1.3 around a neutral 1.0. Default 64
-// gives stretchExp = 1.0 ⇒ pure harmonic series ⇒ output bit-near-
-// identical to v2.0.
+// Two features added on top of v2.0's polyphony:
+//
+//   • Stretch (inharmonic partials). Power-curve warping of the
+//     partial series: partialFreq = _freqHz * (p+1)^stretchExp.
+//     Stretch=64 ⇒ exponent 1.0 ⇒ pure harmonic; below 64
+//     compresses partials toward the fundamental, above 64
+//     stretches them. Default value preserves v2.0 sound.
+//
+//   • Harmonic micro-animation. Per-partial slow amplitude
+//     modulation; each partial wobbles at its own rate (spread
+//     0.7..1.3 × base) so partials never synchronize. Anim Depth=0
+//     by default ⇒ feature off ⇒ v2.0-equivalent sound.
 //
 // Polyphonic K5000-inspired additive synth using inverse FFT with
 // overlap-add resynthesis. Up to 8 simultaneous voices, one per
 // tracker column, mapping SetNote(value, track) → _voices[track].
 //
-// Per-voice state (OLA buffer, phases, envelopes, glide, hop
-// scheduling, pending events) lives in Voice.cs. This machine
-// class owns:
+// Per-voice state (OLA buffer, partial phases, animation phases,
+// envelopes, glide, hop scheduling, pending events) lives in Voice.cs.
+// This machine class owns:
 //
-//   • Parameters (v2.1: appended Stretch after Glide per Build §3.3)
+//   • Parameters (v2.1: Stretch, Anim Rate, Anim Depth appended
+//     after Glide per Build §3.3 — preset-compatible)
 //   • Shared spectrum scratch (_specRe, _specIm) and the FFT
 //     instance, all reused per voice's RunHop
 //   • The voice array
@@ -226,6 +233,26 @@ namespace PedalInvFFT
                        DefValue    = 64,
                        Description = "Partial stretch (64=harmonic, less=compressed, more=bell-like)")]
         public int Stretch { get; set; } = 64;
+
+        // ── Harmonic micro-animation ──────────────────────────────────────
+        // Per-partial slow amplitude modulation. Each partial wobbles at
+        // its own rate (rates spread across [0.7×, 1.3×] of the base
+        // rate so partials never synchronize). Default Anim Depth = 0
+        // turns the feature off entirely; raise it for "alive"
+        // sustained tones.
+        [ParameterDecl(Name        = "Anim Rate",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 32,
+                       Description = "Per-partial animation rate (0.1 Hz to 5 Hz, log)")]
+        public int AnimRate { get; set; } = 32;
+
+        [ParameterDecl(Name        = "Anim Depth",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 0,
+                       Description = "Per-partial animation depth (0 off, 127 ±50% amplitude swing)")]
+        public int AnimDepth { get; set; } = 0;
 
         // ── Track parameter ───────────────────────────────────────────────
         [ParameterDecl(Name        = "Note",
