@@ -1,28 +1,37 @@
-// PedalInvFFT.cs — v2.1.
+// PedalInvFFT.cs — v2.2.
 //
-// Two features added on top of v2.0's polyphony:
+// LFO and modulation routing built on top of v2.1.
 //
-//   • Stretch (inharmonic partials). Power-curve warping of the
-//     partial series: partialFreq = _freqHz * (p+1)^stretchExp.
-//     Stretch=64 ⇒ exponent 1.0 ⇒ pure harmonic; below 64
-//     compresses partials toward the fundamental, above 64
-//     stretches them. Default value preserves v2.0 sound.
+// Per-voice key-synced LFO with four shapes (sine, triangle, square,
+// sample-and-hold via quarter-banding the LFO Shape parameter), rate
+// 0.1..10 Hz log-mapped, and six routing destinations — each with a
+// bipolar depth knob defaulting to 64 (no modulation):
 //
-//   • Harmonic micro-animation. Per-partial slow amplitude
-//     modulation; each partial wobbles at its own rate (spread
-//     0.7..1.3 × base) so partials never synchronize. Anim Depth=0
-//     by default ⇒ feature off ⇒ v2.0-equivalent sound.
+//   • LFO Pitch    — ±3 semitones at full deflection
+//   • LFO Bright   — ±63 in the Brightness param space
+//   • LFO Stretch  — ±32 in the Stretch param space (half-swing)
+//   • LFO Volume   — ±50% multiplicative amplitude
+//   • LFO Formant  — ±63 in the Formant Centre param space
+//   • LFO Anim     — ±63 in the Anim Depth param space
+//
+// Sync target on NoteOn is a per-voice random offset rather than 0,
+// so polyphonic chord voices retrigger to genuinely different starting
+// LFO phases — gives organic "ensemble" feel without an explicit
+// free-run mode parameter.
+//
+// Default LFO depths (all 64) ⇒ the LFO advances internally but routes
+// nowhere ⇒ v2.1 patches sound identical at default values. The 28th
+// global parameter (LFO Anim) closes out v2.2's parameter set.
 //
 // Polyphonic K5000-inspired additive synth using inverse FFT with
 // overlap-add resynthesis. Up to 8 simultaneous voices, one per
 // tracker column, mapping SetNote(value, track) → _voices[track].
 //
 // Per-voice state (OLA buffer, partial phases, animation phases,
-// envelopes, glide, hop scheduling, pending events) lives in Voice.cs.
-// This machine class owns:
+// LFO state, envelopes, glide, hop scheduling, pending events) lives
+// in Voice.cs. This machine class owns:
 //
-//   • Parameters (v2.1: Stretch, Anim Rate, Anim Depth appended
-//     after Glide per Build §3.3 — preset-compatible)
+//   • Parameters (28 globals + Note track param)
 //   • Shared spectrum scratch (_specRe, _specIm) and the FFT
 //     instance, all reused per voice's RunHop
 //   • The voice array
@@ -253,6 +262,70 @@ namespace PedalInvFFT
                        DefValue    = 0,
                        Description = "Per-partial animation depth (0 off, 127 ±50% amplitude swing)")]
         public int AnimDepth { get; set; } = 0;
+
+        // ── LFO ───────────────────────────────────────────────────────────
+        // Per-voice key-synced LFO. Step 1 (this commit) adds the LFO
+        // engine plus the pitch routing destination; step 2 will append
+        // five more destinations (Brightness, Stretch, Volume, Formant,
+        // Anim Depth). All depth knobs default 64 = no modulation, so
+        // the LFO advances internally but produces no audible effect at
+        // default settings.
+
+        [ParameterDecl(Name        = "LFO Rate",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "LFO rate (slow drift to fast tremolo, log-mapped 0.1 to 10 Hz)")]
+        public int LFORate { get; set; } = 64;
+
+        [ParameterDecl(Name        = "LFO Shape",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 0,
+                       Description = "LFO shape: 0..31 sine, 32..63 triangle, 64..95 square, 96..127 sample-and-hold")]
+        public int LFOShape { get; set; } = 0;
+
+        [ParameterDecl(Name        = "LFO Pitch",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "LFO pitch depth (bipolar around 64; full deflection ±3 semitones)")]
+        public int LFOPitch { get; set; } = 64;
+
+        [ParameterDecl(Name        = "LFO Bright",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "LFO Brightness depth (bipolar around 64; full deflection ±63 in param space)")]
+        public int LFOBright { get; set; } = 64;
+
+        [ParameterDecl(Name        = "LFO Stretch",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "LFO Stretch depth (bipolar around 64; full deflection ±32 in param space)")]
+        public int LFOStretch { get; set; } = 64;
+
+        [ParameterDecl(Name        = "LFO Volume",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "LFO Volume depth (bipolar around 64; full deflection ±50% multiplicative)")]
+        public int LFOVolume { get; set; } = 64;
+
+        [ParameterDecl(Name        = "LFO Formant",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "LFO Formant Centre depth (bipolar around 64; full deflection ±63 in param space)")]
+        public int LFOFormant { get; set; } = 64;
+
+        [ParameterDecl(Name        = "LFO Anim",
+                       MinValue    = 0,
+                       MaxValue    = 127,
+                       DefValue    = 64,
+                       Description = "LFO Anim Depth modulation (bipolar around 64; full deflection ±63 in param space)")]
+        public int LFOAnim { get; set; } = 64;
 
         // ── Track parameter ───────────────────────────────────────────────
         [ParameterDecl(Name        = "Note",

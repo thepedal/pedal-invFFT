@@ -1,0 +1,2307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PresetDictionary>
+  <Item Key="Pad - Default">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="60" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="95" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="92" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="18" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Soft Strings">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="56" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="90" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="70" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="90" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="78" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="72" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="28" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="22" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="78" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="74" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Dark">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="76" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="84" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="36" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="48" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="12" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Bright Air">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="70" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="76" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="84" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="70" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="24" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Vox Choir">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="64" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="90" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="88" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="92" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="22" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="28" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="70" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Slow Drone">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="100" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="90" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="64" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="60" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="18" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="80" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="12" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="80" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Glass">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="64" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="78" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="108" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="76" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="88" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="28" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="38" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Filter Sweep">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="68" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="76" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="64" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="22" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="96" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Vibrato">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="64" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="76" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="90" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="80" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="78" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pad - Wah Wash">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="70" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="56" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="72" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="80" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="28" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="96" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Saw">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="18" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="36" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Sine Pure">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="64" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="18" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="40" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="0" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="32" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Square">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="16" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="36" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="28" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Vibrato Sax">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="58" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="36" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="42" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="70" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="60" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="76" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="76" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="84" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="80" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Wah Funk">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="12" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="30" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="56" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="56" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="100" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="88" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="100" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Glide Mono">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="16" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="36" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="64" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Bell Lead">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="14" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="60" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="90" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Lead - Trill">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="16" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="36" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="100" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="70" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="92" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - Soft">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="4" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="60" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="36" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="56" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - Bright">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="70" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="32" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="60" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="90" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - Bell">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="80" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="56" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="70" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="90" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="92" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - Mallet">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="56" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="32" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="50" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="100" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="80" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - EP Tine">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="80" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="50" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="88" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="56" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="56" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="88" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="78" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - Harp">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="90" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="48" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="84" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - Saw">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="32" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="50" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="90" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Pluck - Sharp">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="0" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="50" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="24" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="120" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="80" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="36" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="100" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Soft">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="100" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="88" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="92" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Tubular">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="110" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="90" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="90" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="90" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="100" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Glass">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="96" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="72" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="108" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="76" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="72" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="90" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="108" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Crystal SH">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="100" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="96" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="40" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="90" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Gong Wash">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="6" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="120" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="100" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="88" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="56" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="110" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="80" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="116" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="24" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="32" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Mallet">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="76" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="56" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="56" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="92" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="84" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Animated">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="110" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="90" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="90" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="88" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="96" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="28" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="50" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Wind Chime">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="90" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="100" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="112" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="76" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="100" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="40" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="30" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="76" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Breathing">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="110" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="96" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="90" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="88" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="92" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="18" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="88" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bell - Detuned">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="100" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="84" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="90" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="88" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="76" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="70" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bass - Sub">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="76" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="30" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="24" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="36" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="50" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bass - Saw">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="64" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="50" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="80" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="32" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="90" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="50" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="40" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="90" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bass - Pluck">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="64" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="56" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="0" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="28" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="90" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="48" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="40" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="96" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Bass - Wobble">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="2" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="30" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="50" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="70" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="96" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Vox - Ah">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="36" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="56" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="70" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="76" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="100" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Vox - Ee">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="36" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="56" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="72" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="96" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="60" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="100" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Vox - Oh">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="36" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="56" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="50" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="70" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="100" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Vox - Wah">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="24" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="48" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="60" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="96" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="80" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="96" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Vox - Choir Slow">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="80" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="90" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="88" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="88" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="80" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="24" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="30" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Vox - Talky SH">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="16" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="36" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="60" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="56" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="100" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="90" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="92" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Shimmer Pad">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="70" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="70" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="36" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="64" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Sparkle">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="50" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="70" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="80" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="64" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="96" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Glow">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="80" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="24" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="44" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="16" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="76" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Inhale Pad">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="90" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="84" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="22" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="52" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="12" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="80" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="84" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Drift">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="80" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="90" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="72" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="76" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="18" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="56" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="10" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="76" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Sway">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="70" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="80" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="92" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="28" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="48" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="70" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="74" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Aurora">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="90" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="90" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="88" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="72" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="80" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="22" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="70" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="14" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="80" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="76" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Pulse Field">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="60" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="76" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="40" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="60" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="76" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="96" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Ice Field">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="76" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="84" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="80" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="88" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="50" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="80" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="Anim - Forest">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="80" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="84" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="30" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="48" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="96" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="70" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Glitch">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="0" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="30" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="60" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="24" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="96" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="110" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="96" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="96" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="96" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="92" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="96" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Robot Voice">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="56" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="4" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="24" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="90" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="60" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="50" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="100" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="90" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="96" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Quantum">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="50" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="60" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="70" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="110" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="60" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="96" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="50" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="100" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Tape Stop">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="60" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="16" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="100" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="80" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="110" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="32" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="0" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="64" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="64" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Mass Confusion">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="30" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="60" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="96" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="70" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="80" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="80" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="90" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="88" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="84" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Unstable">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="52" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="24" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="50" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="96" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="64" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="80" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="60" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="96" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="110" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="88" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="88" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="88" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="64" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Time Crystal">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="50" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="100" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="110" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="80" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="104" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="24" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="70" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="6" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="64" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="64" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="80" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="64" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="64" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="76" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+  <Item Key="FX - Maelstrom">
+    <Preset Machine="Pedal invFFT">
+      <Parameters>
+        <Parameter Name="Volume" Group="1" Index="0" Track="0" Value="48" />
+        <Parameter Name="Amp Attack" Group="1" Index="1" Track="0" Value="70" />
+        <Parameter Name="Amp Decay" Group="1" Index="2" Track="0" Value="64" />
+        <Parameter Name="Amp Sustain" Group="1" Index="3" Track="0" Value="100" />
+        <Parameter Name="Amp Release" Group="1" Index="4" Track="0" Value="90" />
+        <Parameter Name="Brightness" Group="1" Index="5" Track="0" Value="100" />
+        <Parameter Name="Tilt" Group="1" Index="6" Track="0" Value="64" />
+        <Parameter Name="Balance" Group="1" Index="7" Track="0" Value="64" />
+        <Parameter Name="Bright Attack" Group="1" Index="8" Track="0" Value="32" />
+        <Parameter Name="Bright Decay" Group="1" Index="9" Track="0" Value="80" />
+        <Parameter Name="Bright Sustain" Group="1" Index="10" Track="0" Value="0" />
+        <Parameter Name="Bright Release" Group="1" Index="11" Track="0" Value="48" />
+        <Parameter Name="Bright Amount" Group="1" Index="12" Track="0" Value="64" />
+        <Parameter Name="Formant Centre" Group="1" Index="13" Track="0" Value="64" />
+        <Parameter Name="Formant Width" Group="1" Index="14" Track="0" Value="64" />
+        <Parameter Name="Formant Amount" Group="1" Index="15" Track="0" Value="0" />
+        <Parameter Name="Glide" Group="1" Index="16" Track="0" Value="0" />
+        <Parameter Name="Stretch" Group="1" Index="17" Track="0" Value="84" />
+        <Parameter Name="Anim Rate" Group="1" Index="18" Track="0" Value="50" />
+        <Parameter Name="Anim Depth" Group="1" Index="19" Track="0" Value="80" />
+        <Parameter Name="LFO Rate" Group="1" Index="20" Track="0" Value="24" />
+        <Parameter Name="LFO Shape" Group="1" Index="21" Track="0" Value="0" />
+        <Parameter Name="LFO Pitch" Group="1" Index="22" Track="0" Value="78" />
+        <Parameter Name="LFO Bright" Group="1" Index="23" Track="0" Value="88" />
+        <Parameter Name="LFO Stretch" Group="1" Index="24" Track="0" Value="88" />
+        <Parameter Name="LFO Volume" Group="1" Index="25" Track="0" Value="76" />
+        <Parameter Name="LFO Formant" Group="1" Index="26" Track="0" Value="76" />
+        <Parameter Name="LFO Anim" Group="1" Index="27" Track="0" Value="76" />
+      </Parameters>
+      <Attributes />
+      <Comment></Comment>
+    </Preset>
+  </Item>
+</PresetDictionary>

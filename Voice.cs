@@ -66,6 +66,12 @@ namespace PedalInvFFT
         bool _hasNoteOff      = false;
         byte _pendingBuzzNote = 0;
 
+        // LFO state (§21).
+        readonly float  _lfoSyncOffset;   // per-voice phase that NoteOn key-syncs to
+        readonly Random _rng;             // for sample-and-hold value generation
+        float _lfoPhase;                  // current LFO phase, [0, 2π)
+        float _lfoSnH;                    // cached sample-and-hold value, [-1, +1]
+
         readonly PedalInvFFTMachine _machine;
 
         public Voice(PedalInvFFTMachine machine, Random rng)
@@ -76,6 +82,13 @@ namespace PedalInvFFT
                 _phases[p]     = (float)(rng.NextDouble() * 2.0 * Math.PI);
                 _animPhases[p] = (float)(rng.NextDouble() * 2.0 * Math.PI);
             }
+            _lfoSyncOffset = (float)(rng.NextDouble() * 2.0 * Math.PI);
+            _lfoPhase      = _lfoSyncOffset;
+            _lfoSnH        = (float)(rng.NextDouble() * 2.0 - 1.0);
+            // Private RNG for runtime use (S&H value refresh). Seeded
+            // from the construction RNG so each voice has independent
+            // randomness without sharing a Random across the audio thread.
+            _rng = new Random(rng.Next());
         }
 
         // ── Event queue (called from setter on UI thread) ─────────────────
@@ -196,6 +209,15 @@ namespace PedalInvFFT
                 _olaReadPos          = 0;
             }
 
+            // LFO key-sync. Reset to the per-voice random offset (not 0)
+            // so polyphonic chord voices retrigger to genuinely different
+            // phases — gives a more organic feel without a free-run mode.
+            // Refresh S&H value too so retriggered notes in S&H mode get
+            // a fresh random value rather than whatever was held from
+            // before.
+            _lfoPhase = _lfoSyncOffset;
+            _lfoSnH   = (float)(_rng.NextDouble() * 2.0 - 1.0);
+
             _ampEnv   .NoteOn();
             _brightEnv.NoteOn();
         }
@@ -226,13 +248,26 @@ namespace PedalInvFFT
                 if (MathF.Abs(_currentMidi - _targetMidi) < 0.001f)
                     _currentMidi = _targetMidi;   // sub-cent residual snap
             }
-            _freqHz = 440f * MathF.Pow(2f, (_currentMidi - 69f) / 12f);
 
-            // Bright env modulation of brightness.
+            // LFO compute — once per hop, value reused by all routing
+            // destinations (just pitch in this commit; more in step 2).
+            float lfoVal = ComputeLfoStep(sr);
+
+            // Pitch modulation — bipolar depth around 64, full deflection
+            // ±3 semitones at the extremes. Adds to _currentMidi without
+            // mutating it (glide tracking continues from the unmodulated
+            // _currentMidi each hop).
+            float pitchModSemi  = lfoVal * (_machine.LFOPitch - 64) / 64f * 3f;
+            float effectiveMidi = _currentMidi + pitchModSemi;
+            _freqHz = 440f * MathF.Pow(2f, (effectiveMidi - 69f) / 12f);
+
+            // Bright env modulation of brightness, plus LFO → Brightness
+            // (step 2). Both are added to the base parameter then clamped.
             float brightEnvAmount = (_machine.BrightAmount - 64) / 64f;
             float brightMod       = brightEnvAmount * _brightEnv.Level * 127f;
+            float brightLfoMod    = lfoVal * (_machine.LFOBright - 64) / 64f * 63f;
             float effectiveBright = MathF.Max(0f, MathF.Min(127f,
-                                              _machine.Brightness + brightMod));
+                                              _machine.Brightness + brightMod + brightLfoMod));
 
             // Hop-constant spectrum-shape modifiers.
             float brightCutoff = (effectiveBright / 127f) * N_PARTIALS;
@@ -243,17 +278,23 @@ namespace PedalInvFFT
 
             // Formant — Gaussian bell on each partial in log-frequency.
             // FormantAmount=0 short-circuits the per-partial branch.
+            // LFO → Formant Centre (step 2) modulates the centre param
+            // before the log-to-Hz mapping, so wah-style sweeps stay
+            // perceptually even regardless of the base centre setting.
             bool  useFormant       = _machine.FormantAmount > 0;
             float formantCenterHz  = 0f;
             float formantInvWidth  = 0f;
             float formantPeakMinus = 0f;
             if (useFormant)
             {
-                formantCenterHz  = 100f * MathF.Pow(60f, _machine.FormantCentre / 127f);
-                float widthOct   = 0.1f + (_machine.FormantWidth / 127f) * 1.9f;
-                formantInvWidth  = 1f / widthOct;
-                float peakDb     = (_machine.FormantAmount / 127f) * 18f;
-                formantPeakMinus = MathF.Pow(10f, peakDb / 20f) - 1f;
+                float formantLfoMod   = lfoVal * (_machine.LFOFormant - 64) / 64f * 63f;
+                float effectiveCentre = MathF.Max(0f, MathF.Min(127f,
+                                                  _machine.FormantCentre + formantLfoMod));
+                formantCenterHz       = 100f * MathF.Pow(60f, effectiveCentre / 127f);
+                float widthOct        = 0.1f + (_machine.FormantWidth / 127f) * 1.9f;
+                formantInvWidth       = 1f / widthOct;
+                float peakDb          = (_machine.FormantAmount / 127f) * 18f;
+                formantPeakMinus      = MathF.Pow(10f, peakDb / 20f) - 1f;
             }
 
             // Partial-stretch exponent. Mapped from the 0..127 Stretch
@@ -263,7 +304,15 @@ namespace PedalInvFFT
             // for the default value. Hoisted out of the partial loop —
             // unchanged within a hop. Per-hop changes are at hop rate
             // (~94 Hz), well below any audible transient.
-            float stretchExp = 1f + (_machine.Stretch - 64) / 64f * 0.3f;
+            //
+            // LFO → Stretch (step 2) modulates the Stretch param value
+            // first, then derives the exponent from the modulated value.
+            // Half-swing (±32 in param space) so even at full LFO depth
+            // the stretch doesn't wander to the absolute extremes of
+            // the parameter range.
+            float stretchLfoMod    = lfoVal * (_machine.LFOStretch - 64) / 64f * 32f;
+            float effectiveStretch = _machine.Stretch + stretchLfoMod;
+            float stretchExp       = 1f + (effectiveStretch - 64) / 64f * 0.3f;
 
             // Harmonic micro-animation (§20). Hoisted out of the
             // partial loop — depth and base rate are constant within a
@@ -271,16 +320,30 @@ namespace PedalInvFFT
             // depth 0 takes a fast path that skips the per-partial Sin
             // and the phase advance, so default-value cost is essentially
             // zero.
-            int   animDepthInt     = _machine.AnimDepth;
-            bool  animOn           = animDepthInt > 0;
-            float animDepth        = 0f;
-            float animPhaseAdvBase = 0f;
+            //
+            // LFO → Anim Depth (step 2) modulates the depth before the
+            // animOn check, so the LFO can switch animation on and off
+            // (when base depth is near 0) or wobble it within its full
+            // range (when base depth is mid).
+            float animLfoMod        = lfoVal * (_machine.LFOAnim - 64) / 64f * 63f;
+            int   animDepthInt      = (int)MathF.Max(0f, MathF.Min(127f,
+                                          _machine.AnimDepth + animLfoMod));
+            bool  animOn            = animDepthInt > 0;
+            float animDepth         = 0f;
+            float animPhaseAdvBase  = 0f;
             if (animOn)
             {
                 animDepth        = (animDepthInt / 127f) * 0.5f;          // 0..0.5
                 float animBaseHz = 0.1f * MathF.Pow(50f, _machine.AnimRate / 127f);
                 animPhaseAdvBase = 2f * MathF.PI * HOP_SIZE / sr * animBaseHz;
             }
+
+            // LFO → Volume (step 2) — multiplicative ±50% swing, applied
+            // uniformly to all partial amplitudes in the deposit loop.
+            // The OLA's 4-frame averaging smooths fast LFOs slightly but
+            // the effect is musically correct at any rate the LFO can
+            // reach (capped at 10 Hz, OLA window ~32 ms).
+            float volMod = 1f + lfoVal * (_machine.LFOVolume - 64) / 64f * 0.5f;
 
             for (int p = 0; p < N_PARTIALS; p++)
             {
@@ -316,6 +379,11 @@ namespace PedalInvFFT
                     float anim = 1f + animDepth * MathF.Sin(_animPhases[p]);
                     amp *= anim;
                 }
+
+                // LFO → Volume (step 2) — uniform amp scale across all
+                // partials. Computed once outside the loop, applied
+                // unconditionally because the cost is one multiply.
+                amp *= volMod;
 
                 float dep   = DEPOSIT_GAIN * amp;
                 float phase = _phases[p];
@@ -379,6 +447,43 @@ namespace PedalInvFFT
             if (MathF.Abs(x) < 1e-6f) return 1f;
             float px = MathF.PI * x;
             return MathF.Sin(px) / px;
+        }
+
+        // Per-hop LFO step. Advances phase by one hop's worth, returns
+        // the LFO output in [-1, +1]. Shape selected by quarter-banding
+        // the 0..127 LFOShape parameter into four ranges. Sample-and-hold
+        // refreshes its held value when the phase wraps a cycle.
+        float ComputeLfoStep(int sr)
+        {
+            // 0.1 to 10 Hz log-mapped (capped below the hop-rate
+            // blockiness threshold; default 64 ⇒ ~1 Hz).
+            float rateHz   = 0.1f * MathF.Pow(100f, _machine.LFORate / 127f);
+            float phaseAdv = 2f * MathF.PI * rateHz * HOP_SIZE / sr;
+
+            _lfoPhase += phaseAdv;
+            bool wrapped = false;
+            while (_lfoPhase >= 2f * MathF.PI)
+            {
+                _lfoPhase -= 2f * MathF.PI;
+                wrapped = true;
+            }
+
+            int shapeBand = _machine.LFOShape / 32;     // 0..3
+            switch (shapeBand)
+            {
+                case 0:                                 // Sine
+                    return MathF.Sin(_lfoPhase);
+                case 1:                                 // Triangle
+                    // 2·asin(sin(phase))/π — clean shape with sine zero
+                    // crossings; one extra trig call vs sine.
+                    return 2f * MathF.Asin(MathF.Sin(_lfoPhase)) / MathF.PI;
+                case 2:                                 // Square
+                    return MathF.Sin(_lfoPhase) >= 0f ? 1f : -1f;
+                default:                                // Sample & Hold
+                    if (wrapped)
+                        _lfoSnH = (float)(_rng.NextDouble() * 2.0 - 1.0);
+                    return _lfoSnH;
+            }
         }
     }
 }
